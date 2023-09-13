@@ -64,7 +64,7 @@
   },
   "devDependencies": {},
   "scripts": {
-    "script": "echo \"Hello I like this course so far\" && exit 0"
+    "script": "./index.js && exit 0"
   },
   "author": "",
   "license": "ISC"
