@@ -2,8 +2,8 @@
 The main purpose of our site is to help people to evaluate their **carbon footprint** on month scale. Someone may go to our website to answer question on his consumer habits and have an idea of how many kilograms or tons of CO2 he is emitting. 
 
 1. Nouns and verbs:  
-* View general CO2 emission information  
-* Generate the CO2 “budget” of someone  
+	* View general CO2 emission information  
+	* Generate the CO2 “budget” of someone  
 
 Fill a consummation form 
 
