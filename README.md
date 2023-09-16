@@ -6,4 +6,4 @@ The main purpose of our site is to help people to evaluate their **carbon footpr
 	* Generate the CO2 “budget” of someone  
     * Fill a consummation form 
 
-Our target is **_eco-considering_** / **_eco-friendly_** people who wants to learn more about the impact of their behavior and how to reduce it with simple actions.>Our user is mainly urban or from the suburbs and wants to question itself and the changes he can make to have a sustainable way of life.  
+Our target is **_eco-considering_** / **_eco-friendly_** people who wants to learn more about the impact of their behavior and how to reduce it with simple actions. >Our user is mainly urban or from the suburbs and wants to question itself and the changes he can make to have a sustainable way of life.  
