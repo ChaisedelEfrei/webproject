@@ -1,7 +1,7 @@
 /* styles.css */
 
 /* Reset some default styles to ensure consistent rendering */
-body, h1, p, select, button, a {
+body, h1, h2, p, a {
   margin: 0;
   padding: 0;
   border: 0;
@@ -25,75 +25,73 @@ header {
 
 header h1 {
   font-size: 32px;
+  margin-bottom: 10px;
 }
 
-/* Container for form and links */
+header p {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+/* Navigation styles */
+nav {
+  background-color: #222;
+  color: #fff;
+  padding: 10px 0;
+  text-align: center;
+}
+
+nav ul {
+  list-style: none;
+}
+
+nav li {
+  display: inline;
+  margin-right: 20px;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+/* Main content container */
 .container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  margin: 20px auto;
+  margin: 20px;
   padding: 20px;
   background-color: #fff;
   border-radius: 5px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-/* Form styles */
-form {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-bottom: 20px;
-}
-
-label {
-  font-size: 18px;
-  margin-bottom: 10px;
-}
-
-select, button {
-  padding: 10px;
-  font-size: 16px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  margin-bottom: 10px;
-}
-
-button {
-  background-color: #007bff;
+/* Footer styles */
+footer {
+  background-color: #222;
   color: #fff;
-  border: none;
-  cursor: pointer;
-  transition: background-color 0.3s;
+  text-align: center;
+  padding: 10px 0;
 }
 
-button:hover {
-  background-color: #0056b3;
-}
+/* Responsive styles */
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 24px;
+  }
 
-/* Result styles */
-#result {
-  font-size: 18px;
-  margin-top: 20px;
-}
+  header p {
+    font-size: 16px;
+  }
 
-/* Links styles */
-.links {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-top: 20px;
-}
+  nav li {
+    margin-right: 10px;
+  }
 
-.links a {
-  font-size: 16px;
-  color: #007bff;
-  text-decoration: none;
-  margin-bottom: 10px;
-}
-
-.links a:hover {
-  text-decoration: underline;
+  nav a {
+    font-size: 16px;
+  }
 }
