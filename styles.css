@@ -1,43 +1,56 @@
-body, h1, p, select, button {
+/* styles.css */
+
+/* Reset some default styles to ensure consistent rendering */
+body, h1, p, select, button, a {
   margin: 0;
   padding: 0;
   border: 0;
   font-family: Arial, sans-serif;
 }
 
-/* Center the content vertically and horizontally */
+/* Background color and font styles */
 body {
+  background-color: #f8f8f8;
+  color: #333;
+  font-size: 16px;
+}
+
+/* Header styles */
+header {
+  background-color: #222;
+  color: #fff;
+  padding: 20px 0;
+  text-align: center;
+}
+
+header h1 {
+  font-size: 32px;
+}
+
+/* Container for form and links */
+.container {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 100vh;
-  background-color: #f0f0f0;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-/* Style the header */
-h1 {
-  font-size: 24px;
-  color: #333;
-  margin-bottom: 20px;
-}
-
-/* Style the form container */
+/* Form styles */
 form {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: #fff;
-  padding: 20px;
-  border-radius: 5px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
 }
 
-/* Style the form elements */
 label {
   font-size: 18px;
   margin-bottom: 10px;
-  color: #333;
 }
 
 select, button {
@@ -60,21 +73,27 @@ button:hover {
   background-color: #0056b3;
 }
 
-/* Style the result container */
+/* Result styles */
 #result {
   font-size: 18px;
-  color: #333;
   margin-top: 20px;
 }
 
-/* Style the hyperlinks */
-a {
+/* Links styles */
+.links {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.links a {
   font-size: 16px;
   color: #007bff;
   text-decoration: none;
-  margin-top: 20px;
+  margin-bottom: 10px;
 }
 
-a:hover {
+.links a:hover {
   text-decoration: underline;
 }
