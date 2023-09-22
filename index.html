@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Assignement 2</title>
+        <link rel="stylesheet" type="text/css" href="styles.css">
+        
+    </head>
+    <body>
+        <h1>
+            Assignement 2
+        </h1>
+        <form action="/api/endpoint" method="GET">
+            <label for="argument">Select an argument:</label>
+            <select id="argument" name="argument">
+              <option value="data1">1</option>
+              <option value="data2">2</option>
+            </select>
+            <button onclick="fetchData()">Submit</button>
+            <div id="result"></div>
+          
+            <script>
+              function fetchData() {
+                event.preventDefault();
+                const argument = document.getElementById('argument').value;
+          
+                fetch(`/api/endpoint?argument=${argument}`)
+                .then((response) => response.json())
+                .then((data) => {
+                    const message = data.message;
+                    document.getElementById('result').textContent = message;
+                })
+                .catch((error) => {
+                    console.error('Error:', error);
+                });
+              }
+            </script>
+        <a href="button1.html">Click here to access the first html file</a>
+        <a href="https://www.porsche.com/usa/models/911/911-turbo-models/911-turbo/">Click here to buy a Porsche 911 Turbo</a>
+        
+    </body>
+    
+</html>
