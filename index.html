@@ -8,34 +8,98 @@
     </head>
     <body>
         <h1>
-            Assignement 2
+            Assignement 4
         </h1>
-        <form action="/api/endpoint" method="GET">
-            <label for="argument">Select an argument:</label>
-            <select id="argument" name="argument">
-              <option value="data1">1</option>
-              <option value="data2">2</option>
-            </select>
-            <button onclick="fetchData()">Submit</button>
-            <div id="result"></div>
+        
+            
           
+           
+
+            <button onclick="createRecord()">Create Record for table test id=3 and title='Learning how to die'</button>
+            <button onclick="readRecords()">Read Records of user1 </button>
+            <button onclick="updateRecord()">Update Record users id=1</button>
+            <button onclick="deleteRecord()">Delete Record of test id=3</button>
+
             <script>
-              function fetchData() {
-                //to prevent the apparation of another page
+            // Function to make an AJAX request for creating a record
+            function createRecord() {
                 event.preventDefault();
-                const argument = document.getElementById('argument').value;
-          
-                fetch(`/api/endpoint?argument=${argument}`)
+                const title = 'Learnig how to die';
+                const test_id = 3;
+                fetch('/api/create', {
+                
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ title, test_id }),
+                })
                 .then((response) => response.json())
                 .then((data) => {
-                    const message = data.message;
-                    document.getElementById('result').textContent = message;
+                    console.log(data);
+                    // Update UI with response
                 })
                 .catch((error) => {
-                    console.error('Error:', error);
+                    console.error(error);
                 });
-              }
+            }
+             // Function to make an AJAX request for reading records
+            function readRecords() {
+            // Replace 'parameter_value' with the value you want to search for
+            const parameter = 'user1';
+
+            fetch(`/api/read/${parameter}`)
+                .then((response) => response.json())
+                .then((data) => {
+                console.log(data);
+                // Update UI with response
+                })
+                .catch((error) => {
+                console.error(error);
+                });
+            }
+
+            // Function to make an AJAX request for updating a record
+            function updateRecord() {
+            const id = 1; 
+
+            fetch(`/api/update/${id}`, {
+                method: 'PUT',
+                headers: {
+                'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ username: 'John', email: 'john@gmail.com' }),
+            })
+                .then((response) => response.json())
+                .then((data) => {
+                console.log(data);
+                // Update UI with response
+                })
+                .catch((error) => {
+                console.error(error);
+                });
+            }
+
+            // Function to make an AJAX request for deleting a record
+            function deleteRecord() {
+            const id = 3 ; // Replace with the ID of the record you want to delete
+
+            fetch(`/api/delete/${id}`, {
+                method: 'DELETE',
+            })
+                .then((response) => response.json())
+                .then((data) => {
+                console.log(data);
+                // Update UI with response
+                })
+                .catch((error) => {
+                console.error(error);
+                });
+            }
+
             </script>
+
+
         <di><a href="button1.html">Click here to access the first html file</a></di>
         <div><a href="https://www.porsche.com/usa/models/911/911-turbo-models/911-turbo/">Click here to buy a Porsche 911 Turbo</a></div>
         
